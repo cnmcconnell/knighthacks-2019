@@ -18,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/cnmcconnell/knighthacks-2019/issues"
   },
-  "homepage": "https://github.com/cnmcconnell/knighthacks-2019#readme"
+  "homepage": "https://github.com/cnmcconnell/knighthacks-2019#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
 }

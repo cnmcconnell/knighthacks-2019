@@ -2,14 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>title</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
   </head>
 
   <body>
 
+    <div class="nav">
+      <a href="index.html" class="btn"> <img src="images/home.svg"> </a>
+      <a href="profile.html" class="btn"> <img src="images/profile.svg"> </a>
+      <a href="budget.html" class="btn"> <img src="images/budget.svg"> </a>
+    </div>
 
 
-<pre id="json"> </pre>
+
+
   <script>
     fetch('https://jsonplaceholder.typicode.com/todos/')
   .then(response => response.json())

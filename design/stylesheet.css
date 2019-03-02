@@ -1,4 +1,22 @@
 
-html, body {
+* {
+  padding: 0;
+  margin: 0;
+}
 
+html, body {
+height: 100%;
+}
+
+.nav {
+  background-color: orange;
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding: 0 4rem;
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+
+  <body>
+
+
+
+<pre id="json"> </pre>
+  <script>
+    fetch('https://jsonplaceholder.typicode.com/todos/')
+  .then(response => response.json())
+  .then(json => {
+    document.getElementById("json").innerHTML=JSON.stringify(json);
+  })
+  </script>
+
+  </body>
+
+</html>

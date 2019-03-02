@@ -7,7 +7,12 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build-server": "rollup -c ./lib/rollup.config.js",
+    "build-server-watch": "rollup -c ./lib/rollup.config.js --watch",
+    "build-client": "",
+    "build-client-watch": ""
   },
   "repository": {
     "type": "git",

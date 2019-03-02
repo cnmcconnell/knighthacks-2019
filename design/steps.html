@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+
+      <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+
+    <div class="reciperow">
+      <div> Steps </div>
+      <div> Ingredients </div>
+      <div> Nutrition </div>
+    </div>
+
+    <div class="stepcontent">
+
+    <div type="1" class="steps">
+      <div class="stepitem"> Proin quis edivt vel tellus mattis consectetur sodales id diam. Pellentesque convaldivs urna eu tortor molestie, non porta metus elementum. Nam at ante urna. Donec rhoncus faucibus tristique </div>
+      <div class="stepitem"> Proin quis edivt vel tellus mattis consectetur sodales id diam. Pellentesque convaldivs urna eu tortor molestie, non porta metus elementum. </div>
+      <div class="stepitem"> Proin quis edivt vel tellus mattis consectetur sodales id diam. Pellentesque convaldivs urna eu tortor molestie, non porta metus elementum. </div>
+      <div class="stepitem"> Proin quis edivt vel tellus mattis consectetur sodales id diam. Pellentesque convaldivs urna eu tortor molestie, non porta metus elementum. </div>
+      <div class="stepitem"> Proin quis elit vel tellus mattis consectetur sodales id diam. Pellentesque convallis urna eu tortor molestie, non porta metus elementum. </div>
+      <div class="stepitem"> Proin quis elit vel tellus mattis consectetur sodales id diam. Pellentesque convallis urna eu tortor molestie, non porta metus elementum. </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+      <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/')
+      .then(response => response.json())
+      .then(json => {
+        document.getElementById("json").innerHTML=JSON.stringify(json);
+      })
+      </script>
+  </body>
+</html>

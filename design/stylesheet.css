@@ -1,45 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  max-width: 90%;
+}
+
+h3 {
+  color: #333;
 }
 
 html, body {
 height: 100%;
+background-color: #FFF1DF;
+color: #333;
 }
 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/*2B2F3F*/
 .nav {
-  background-color: orange;
+  background-color: #D61E17;
   min-height: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
 .btn {
   display: flex;
-  justify-content: center;
-  padding: 0 4rem;
+  margin: 0 3rem;
+  align-items: center;
 }
 
 .search {
   display: flex;
   justify-content: flex-end;
   background-color: gray;
+  max-height: 2rem;
 }
 .searchbar {
   width: 90%;
+  padding: 0 1rem
+}
+.searchicon {
+  max-width: 3rem;
 }
 
 .news {
   display: flex;
-  border-top: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
-  background-color: tan;
+  border-bottom: 1px solid #CF9649;
+  background-color: #F9B559;
 }
 
 .item {
   margin: 1rem;
-  border: 5px solid black;
+
+}
+
+.image {
+  border: 3px solid #05360cab;
+  border-radius: 6px;
 }
 
 .description {
@@ -48,10 +81,142 @@ height: 100%;
 
 .row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
 
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .heart {
   height: 2rem;
+  display: flex;
+  align-self: center;
+}
+
+.heartrecipe {
+  height: 2rem;
+  display: flex;
+  align-self: center;
+  padding: 0 0 0 2rem;
+}
+
+.reciperow {
+  background-color: #D61E17;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: .5rem;
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem 0 5rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: space-evenly;
+}
+
+.steps {
+  max-width: 18rem;
+  margin: 2rem 0 2rem;
+}
+
+.stepitem {
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stepcontent {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem 0 5rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: space-evenly;
+}
+
+.ingredientitem {
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profilehead {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.profiletitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.profilerow {
+  background-color: #D61E17;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: .5rem;
+  flex-shrink: 0;
+}
+
+.following {
+  display: flex;
+  border-bottom: 2px solid lightgray;
+  background-color: tan;
+  justify-content: space-evenly;
+}
+
+.followers {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  margin: 0 0 .5rem;
+}
+
+.pic {
+  margin: 1rem;
+  border: 5px solid black;
+}
+
+.plans {
+  background-color: tan;
+  min-height: 2rem;
+}
+
+.budgetrow {
+  background-color: #05360C;
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.none {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.shownone {
+
 }

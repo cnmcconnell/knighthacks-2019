@@ -11,7 +11,7 @@
 
   <body>
 
-    <div class="nav">
+    <div class="nav" id="nav">
       <a href="index.html" class="btn"> <img src="images/home.svg" style="height: 2rem;"> </a>
       <a href="profile.html" class="btn"> <img src="images/profile.svg" style="height: 2rem;"> </a>
       <a href="budget.html" class="btn"> <img src="images/budget.svg" style="height: 2rem;"> </a>
@@ -24,7 +24,7 @@
 
     <div class="news">
       <div class="item">
-        <img src="images/recipe.jpg" style="width: 140px; height: 140px;">
+        <img class= "image" src="images/recipe.jpg" style="width: 140px; height: 140px;">
       </div>
 
       <div class="description">
@@ -33,13 +33,13 @@
           <div class="price"> $9.99 </div>
           <img class="heart" src="images/heart.svg">
         </div>
-          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. Morbi magna massa, finibus non arcu non, commodo molestie neque. </p>
+          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. </p>
 
       </div>
     </div>
     <div class="news">
       <div class="item">
-        <img src="images/recipe.jpg" style="width: 140px; height: 140px;">
+        <img class= "image" src="images/recipe.jpg" style="width: 140px; height: 140px;">
       </div>
 
       <div class="description">
@@ -48,13 +48,13 @@
           <div class="price"> $9.99 </div>
           <img class="heart" src="images/heart.svg">
         </div>
-          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. Morbi magna massa, finibus non arcu non, commodo molestie neque. </p>
+          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. </p>
 
       </div>
     </div>
     <div class="news">
       <div class="item">
-        <img src="images/recipe.jpg" style="width: 140px; height: 140px;">
+        <img class= "image" src="images/recipe.jpg" style="width: 140px; height: 140px;">
       </div>
 
       <div class="description">
@@ -63,13 +63,13 @@
           <div class="price"> $9.99 </div>
           <img class="heart" src="images/heart.svg">
         </div>
-          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. Morbi magna massa, finibus non arcu non, commodo molestie neque. </p>
+          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. </p>
 
       </div>
     </div>
     <div class="news">
       <div class="item">
-        <img src="images/recipe.jpg" style="width: 140px; height: 140px;">
+        <img class= "image" src="images/recipe.jpg" style="width: 140px; height: 140px;">
       </div>
 
       <div class="description">
@@ -78,7 +78,7 @@
           <div class="price"> $9.99 </div>
           <img class="heart" src="images/heart.svg">
         </div>
-          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. Morbi magna massa, finibus non arcu non, commodo molestie neque. </p>
+          <p> Vestibulum quis nisl elit. Etiam vel ante a ex gravida venenatis at vel odio. </p>
 
       </div>
     </div>
@@ -93,6 +93,26 @@
     document.getElementById("json").innerHTML=JSON.stringify(json);
   })
   </script>
+
+  <script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("nav");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
   </body>
 

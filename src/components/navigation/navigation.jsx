@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 
-import styles from './navigation.style.js';
+import styles from './navigation.style';
 
 class Navigation extends Component {
   constructor(props) {

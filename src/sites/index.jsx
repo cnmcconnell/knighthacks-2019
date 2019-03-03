@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import './style.css';
 
-import { Navigation } from '../components';
+import { Navigation, RecipeCard } from '../components';
 
 class Index extends Component {
   constructor(props) {
@@ -18,7 +18,12 @@ class Index extends Component {
 
     return (
       <Fragment>
-        <Navigation />
+        <Navigation name="first one" />
+        <RecipeCard name="second one" />
+        <RecipeCard name="third" />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
       </Fragment>
     );
   }

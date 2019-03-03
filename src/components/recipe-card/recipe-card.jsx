@@ -7,9 +7,18 @@ import styles from './recipe-card.style';
 class RecipeCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      showSteps: false,
+    };
 
     this.handlePlanAdd = this.handlePlanAdd.bind(this);
+    this.handleShowSteps = this.handleShowSteps.bind(this);
+  }
+
+  handleShowSteps() {
+    this.setState(prevState => ({
+      showSteps: !prevState.showSteps,
+    }));
   }
 
   handlePlanAdd() {
@@ -25,6 +34,8 @@ class RecipeCard extends Component {
       ingredients,
       steps,
     } = this.props;
+
+    const { showSteps } = this.state;
 
     const totalNut = {
       calories: 0,
@@ -43,38 +54,53 @@ class RecipeCard extends Component {
       totalPrice += parseFloat(item.nutrition.price);
     });
 
+    console.log( steps );
+
+    const elmSteps = (showSteps)
+      ? (
+        <div className={classes.steps}>
+          {steps.map((step, i) => (
+            <div key={step + i} className={classes.step}>
+              {step}
+            </div>
+          ))}
+        </div>
+      ) : null;
+
     return (
       <div className={classes.recipeCard}>
-
-        <div className={classes.items}>
-          <img className={classes.image} alt="recipe" src="images/recipe.jpg" />
-        </div>
-
-        <div className={classes.description}>
-          <div className={classes.row}>
-            <h3>{name}</h3>
-            <div className={classes.price}>{`$${totalPrice.toFixed(2)}`}</div>
-            <img className={classes.heart} alt="recipe" src="images/add.svg" onClick={this.handlePlanAdd} />
+        <div className={classes.top}>
+          <div className={classes.items} onClick={this.handleShowSteps}>
+            <img className={classes.image} alt="recipe" src="images/recipe.jpg" />
           </div>
-          <div className={classes.nutContainer}>
-            <div className={classes.calories}>
-              <div>Cal</div>
-              <div>{totalNut.calories.toFixed(2)}</div>
+
+          <div className={classes.description}>
+            <div className={classes.row}>
+              <h3>{name}</h3>
+              <div className={classes.price}>{`$${totalPrice.toFixed(2)}`}</div>
+              <img className={classes.heart} alt="recipe" src="images/add.svg" onClick={this.handlePlanAdd} />
             </div>
-            <div className={classes.fat}>
-              <div>Fat</div>
-              <div>{totalNut.fat.toFixed(2)}</div>
-            </div>
-            <div className={classes.carbs}>
-              <div>Carbs</div>
-              <div>{totalNut.carbs.toFixed(2)}</div>
-            </div>
-            <div className={classes.protein}>
-              <div>Prot</div>
-              <div>{totalNut.protein.toFixed(2)}</div>
+            <div className={classes.nutContainer}>
+              <div className={classes.calories}>
+                <div>Cal</div>
+                <div>{totalNut.calories.toFixed(2)}</div>
+              </div>
+              <div className={classes.fat}>
+                <div>Fat</div>
+                <div>{totalNut.fat.toFixed(2)}</div>
+              </div>
+              <div className={classes.carbs}>
+                <div>Carbs</div>
+                <div>{totalNut.carbs.toFixed(2)}</div>
+              </div>
+              <div className={classes.protein}>
+                <div>Prot</div>
+                <div>{totalNut.protein.toFixed(2)}</div>
+              </div>
             </div>
           </div>
         </div>
+        {elmSteps}
       </div>
     );
   }

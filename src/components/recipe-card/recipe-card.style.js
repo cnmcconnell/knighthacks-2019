@@ -1,6 +1,7 @@
 export default {
   recipeCard: {
     display: 'flex',
+    flexDirection: 'column',
     borderBottom: '1px solid #CF9649',
     backgroundColor: '#F9B559',
     flexShrink: '0',
@@ -8,6 +9,10 @@ export default {
     '& h3': {
       color: '#333',
     },
+  },
+  top: {
+    display: 'flex',
+    flexShrink: '0',
   },
   items: {
     margin: '1rem',
@@ -100,5 +105,21 @@ export default {
     height: '2rem',
     margin: '0.2rem 0.6rem',
     borderRadius: '0.2rem',
+  },
+  steps: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexShrink: '0',
+  },
+  step: {
+    margin: '0.4rem',
+    padding: '0.2rem',
+    minHeight: '1.2rem',
+    fontSize: '0.8rem',
+    borderRadius: '0.2rem',
+    backgroundColor: '#ce851b',
+    color: '#fff',
+    display: 'flex',
+    alignItems: 'center',
   },
 };

@@ -149,6 +149,7 @@ class Index extends Component {
           key={recipe.name + i}
           name={recipe.name}
           ingredients={recipe.ingredients}
+          steps={recipe.steps}
           handlePlanAdd={this.handlePlanAdd}
         />
       ));
@@ -179,6 +180,7 @@ class Index extends Component {
               key={recipe.name + i}
               name={recipe.name}
               ingredients={recipe.ingredients}
+              steps={recipe.steps}
             />
           ))}
           <FinalOutput

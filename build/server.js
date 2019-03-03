@@ -371,6 +371,16 @@ function nutrition(query) {
   });
 }
 
+function recipe(db) {
+  return new Promise((resolve, reject) => {
+    return db.recipes.map(recipe => ({
+      name: recipe.name,
+      description: recipe.description,
+      price: recipe.price,
+    }));
+  });
+}
+
 var get = async ({ data, db }) => {
   const myData = data.data;
 
@@ -383,6 +393,10 @@ var get = async ({ data, db }) => {
 
     case 'details':
       output = await nutrition(myData.query);
+      break;
+
+    case 'recipes':
+      output = await recipe(db);
       break;
 
     default:
@@ -502,6 +516,7 @@ class Server {
       data,
       db: this.db,
     }).then((r) => {
+      console.log('sending', r);
       response.send(r);
     });
   }

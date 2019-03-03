@@ -8,6 +8,13 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(val) {
+    const { updatePage } = this.props;
+    updatePage(val);
   }
 
   render() {
@@ -15,15 +22,22 @@ class Navigation extends Component {
 
     return (
       <div className={classes.navigation}>
-        {children}
+        <div className={classes.btn} onClick={this.handleClick.bind(this, 'recipes')} value="recipes">
+          <img src="images/home.svg" />
+        </div>
+        <div className={classes.btn} onClick={this.handleClick.bind(this, 'create')} value="create">
+          <img src="images/add.svg" />
+        </div>
+        <div className={classes.btn} onClick={this.handleClick.bind(this, 'budget')} value="budget">
+          <img src="images/budget.svg" />
+        </div>
       </div>
     );
   }
 }
 
 Navigation.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default injectSheet(styles)(Navigation);
